@@ -1,5 +1,5 @@
-apiVersion: spot.io/v1beta1
-kind: SpotDeployment
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
