@@ -18,3 +18,10 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+  strategy:
+    # For a normal rolling update, simply specify the canary strategy without steps defined.
+    # The maxSurge and maxUnavailable fields can be specified. If omitted, defaults to 25% and 0
+    # respectively.
+    RollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
